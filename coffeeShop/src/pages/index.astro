@@ -1,7 +1,15 @@
 ---
-const name: string = "Hi! Juanchis";
+import "@/styles/global.css";
+import Layout from "@/layouts/Layout.astro";
 
-import "../styles/global.css";
+import bg from "@/assets/bg_home.jpg";
 ---
 
-<h1>Welcome {name}</h1>
+<Layout
+  title="Inicio"
+  bgImage={bg.src}
+  subTitle="Disfruta de una deliciosa taza de café"
+>
+  <h1>Inicio</h1>
+  <section slot="after-main-content"> Promociones</section>
+</Layout>
